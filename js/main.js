@@ -14,14 +14,14 @@ document.addEventListener('mousemove', e => {
   mouseX = e.clientX;
   mouseY = e.clientY;
   cursor.style.left = mouseX + 'px';
-  cursor.style.top  = mouseY + 'px';
+  cursor.style.top = mouseY + 'px';
 });
 
 function animateCursorRing() {
   ringX += (mouseX - ringX) * 0.12;
   ringY += (mouseY - ringY) * 0.12;
   cursorRing.style.left = ringX + 'px';
-  cursorRing.style.top  = ringY + 'px';
+  cursorRing.style.top = ringY + 'px';
   requestAnimationFrame(animateCursorRing);
 }
 animateCursorRing();
@@ -29,26 +29,26 @@ animateCursorRing();
 // Scale ring on hover over interactive elements
 document.querySelectorAll('a, button, .project-card, .member-card, .nav__cta').forEach(el => {
   el.addEventListener('mouseenter', () => {
-    cursorRing.style.width  = '60px';
+    cursorRing.style.width = '60px';
     cursorRing.style.height = '60px';
     cursorRing.style.borderColor = 'rgba(0,212,255,0.8)';
   });
   el.addEventListener('mouseleave', () => {
-    cursorRing.style.width  = '36px';
+    cursorRing.style.width = '36px';
     cursorRing.style.height = '36px';
     cursorRing.style.borderColor = 'rgba(0,170,255,0.5)';
   });
 });
 
 // --- Particle Canvas ---
-const canvas  = document.getElementById('particleCanvas');
-const ctx     = canvas.getContext('2d');
+const canvas = document.getElementById('particleCanvas');
+const ctx = canvas.getContext('2d');
 let particles = [];
 const PARTICLE_COUNT = 90;
 const CONNECTION_DIST = 120;
 
 function resize() {
-  canvas.width  = window.innerWidth;
+  canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
 resize();
@@ -57,17 +57,17 @@ window.addEventListener('resize', resize);
 class Particle {
   constructor() { this.reset(); }
   reset() {
-    this.x  = Math.random() * canvas.width;
-    this.y  = Math.random() * canvas.height;
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
     this.vx = (Math.random() - 0.5) * 0.4;
     this.vy = (Math.random() - 0.5) * 0.4;
-    this.r  = Math.random() * 1.5 + 0.5;
+    this.r = Math.random() * 1.5 + 0.5;
     this.opacity = Math.random() * 0.5 + 0.2;
   }
   update() {
     this.x += this.vx;
     this.y += this.vy;
-    if (this.x < 0 || this.x > canvas.width)  this.vx *= -1;
+    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
     if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
   }
   draw() {
@@ -128,7 +128,7 @@ window.addEventListener('scroll', () => {
 
 function updateActiveNav() {
   const sections = document.querySelectorAll('section[id]');
-  const links    = document.querySelectorAll('.nav__links a');
+  const links = document.querySelectorAll('.nav__links a');
   let current = '';
   sections.forEach(s => {
     if (window.scrollY >= s.offsetTop - 120) current = s.id;
@@ -160,7 +160,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 // --- Counter animation ---
 function animateCounter(el, target) {
   let current = 0;
-  const step  = target / 50;
+  const step = target / 50;
   const timer = setInterval(() => {
     current += step;
     if (current >= target) { current = target; clearInterval(timer); }
@@ -174,7 +174,7 @@ const counterObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       const strong = e.target.querySelector('strong');
-      const raw    = strong.textContent.replace(/[^0-9]/g, '');
+      const raw = strong.textContent.replace(/[^0-9]/g, '');
       if (raw) animateCounter(strong, parseInt(raw, 10));
       counterObserver.unobserve(e.target);
     }
@@ -204,7 +204,7 @@ window.CodionInsert = {
     const grid = document.getElementById('projects-grid');
     if (!grid) return;
     const techHtml = tech.map(t => `<span>${t}</span>`).join('');
-    const imgHtml  = imgSrc
+    const imgHtml = imgSrc
       ? `<div class="project-card__img-wrap"><img src="${imgSrc}" alt="${title}" class="project-card__img"/></div>`
       : '';
     const card = document.createElement('div');
