@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codion — Команда разработчиков</title>
+  <meta name="description"
+    content="Codion — команда студентов-разработчиков КИПФИНа. Создаём цифровые продукты: KipCalendar, платформу «Успех Онлайн» и другие." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300;400;500&family=Exo+2:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============================
+     NAVIGATION
+============================= -->
+  <nav class="nav" id="navbar">
+    <div class="nav__brand">
+      <img src="images\codion-logo-dark.png" style="border-radius: 40%;" alt="Codion Logo"
+        onerror="this.style.display='none'" />
+      <span>Codion</span>
+    </div>
+
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#projects">Проекты</a></li>
+      <li><a href="#team">Команда</a></li>
+      <li><a href="#its">ИТС КИПФИН</a></li>
+      <li><a href="#news">Новости</a></li>
+    </ul>
+
+    <a href="#projects" class="btn btn--outline nav__cta">Наши проекты</a>
+
+    <div class="nav__burger" id="burger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ============================
+     HERO
+============================= -->
+  <section class="hero" id="home">
+    <canvas class="hero__canvas" id="particleCanvas"></canvas>
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <img src="images/codion-logo-dark.png" style="margin-top: 50px; border-radius: 40%;" alt="Codion"
+        class="hero__logo" onerror="this.src='images/codion-logo-dark.png'" />
+      <p class="hero__eyebrow">// Команда разработчиков · КИПФИН</p>
+      <h1 class="hero__title">
+        WE <span>BUILD</span><br />DIGITAL<br />FUTURE
+      </h1>
+      <p class="hero__sub">
+        Разрабатываем современные цифровые продукты — от электронных журналов до образовательных платформ
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">
+          <i class="fas fa-rocket"></i> Наши проекты
+        </a>
+        <a href="#team" class="btn btn--outline">
+          <i class="fas fa-users"></i> Команда
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+     ABOUT
+============================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">// 01 · О нас</span>
+        <h2 class="section__title">Кто мы такие</h2>
+        <p class="section__desc">
+          Codion — студенческая команда разработчиков из Колледжа информационных
+          технологий и программирования Финансового университета. Мы создаём реальные
+          цифровые продукты, которые решают задачи студентов и преподавателей.
+        </p>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__visual reveal">
+          <img src="images/bg-particles-3.jpg" alt="Codion Team" class="about__visual-img" />
+        </div>
+
+        <div class="about__text reveal">
+          <h3>Строим будущее<br />своими руками</h3>
+          <p>
+            Мы — группа студентов, которые не ограничиваются учебной программой.
+            Под руководством Жукова Савелия команда Codion разрабатывает продукты,
+            которые уже используются в стенах КИПФИНа.
+          </p>
+          <p>
+            Наш стек охватывает веб-разработку, мобильные приложения, базы данных
+            и облачные технологии. Каждый участник — специалист в своей области,
+            но мы работаем как единый механизм.
+          </p>
+          <p>
+            Помимо разработки, мы активно участвуем в жизни ИТС КИПФИН —
+            информационно-технического сообщества Финансового университета.
+          </p>
+
+          <div class="about__stats">
+            <div class="about__stat">
+              <strong>3+</strong>
+              <span>Проекта</span>
+            </div>
+            <div class="about__stat">
+              <strong>4</strong>
+              <span>Разработчика</span>
+            </div>
+            <div class="about__stat">
+              <strong>2024</strong>
+              <span>Год основания</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+     PROJECTS
+============================= -->
+  <section class="section section--alt" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">// 02 · Проекты</span>
+        <h2 class="section__title">Что мы создаём</h2>
+        <p class="section__desc">
+          Наши продукты решают реальные задачи: от цифровизации учебного процесса
+          до создания образовательных экосистем.
+        </p>
+      </div>
+
+      <div class="projects__grid" id="projects-grid">
+
+        <!-- Project 1: KipCalendar -->
+        <div class="project-card reveal">
+          <div class="project-card__img-wrap">
+            <img src="images/card-1.jpg" alt="KipCalendar" class="project-card__img" />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__tag">// Веб-приложение · В разработке</p>
+            <h3 class="project-card__title">KipCalendar</h3>
+            <p class="project-card__desc">
+              Электронный журнал и система управления учебным расписанием для студентов
+              и преподавателей КИПФИНа. Замена бумажного документооборота на удобный
+              цифровой формат с уведомлениями и аналитикой.
+            </p>
+            <div class="project-card__tech">
+              <span>Python</span>
+              <span>Django</span>
+              <span>PostgreSQL</span>
+              <span>Vue.js</span>
+            </div>
+            <a href="#" class="project-card__link">
+              Подробнее <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Успех Онлайн -->
+        <div class="project-card reveal">
+          <div class="project-card__img-wrap">
+            <img src="images/card-2.jpg" alt="Успех Онлайн" class="project-card__img" />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__tag">// Образовательная платформа · Активно</p>
+            <h3 class="project-card__title">Успех Онлайн</h3>
+            <p class="project-card__desc">
+              Образовательная платформа для дистанционного обучения и мониторинга
+              успеваемости. Включает систему тестирования, личные кабинеты студентов
+              и преподавателей, а также аналитический дашборд.
+            </p>
+            <div class="project-card__tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>Docker</span>
+            </div>
+            <a href="#" class="project-card__link">
+              Подробнее <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: placeholder -->
+        <div class="project-card reveal">
+          <div class="project-card__img-wrap">
+            <img src="images/card-3.jpg" alt="Проект 3" class="project-card__img" />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__tag">// Утилита · Завершён</p>
+            <h3 class="project-card__title">Название проекта</h3>
+            <p class="project-card__desc">
+              Описание третьего проекта команды. Укажите задачу, которую решает этот продукт,
+              технологии и результат разработки. Отредактируйте этот текст.
+            </p>
+            <div class="project-card__tech">
+              <span>C#</span>
+              <span>.NET</span>
+              <span>SQL</span>
+            </div>
+            <a href="#" class="project-card__link">
+              Подробнее <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal">
+          <div class="project-card__img-wrap">
+            <img src="images/card-4.jpg" alt="Проект 4" class="project-card__img" />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__tag">// API · В планах</p>
+            <h3 class="project-card__title">Следующий проект</h3>
+            <p class="project-card__desc">
+              Здесь будет ваш следующий проект. Добавьте описание через приложение insert.py
+              или отредактируйте HTML-код напрямую в этом блоке.
+            </p>
+            <div class="project-card__tech">
+              <span>FastAPI</span>
+              <span>Redis</span>
+              <span>Kubernetes</span>
+            </div>
+            <a href="#" class="project-card__link">
+              Подробнее <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /#projects-grid -->
+    </div>
+  </section>
+
+  <!-- ============================
+     TEAM
+============================= -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">// 03 · Команда</span>
+        <h2 class="section__title">Наши люди</h2>
+        <p class="section__desc">
+          Четыре разработчика с разными специализациями — один общий вектор.
+        </p>
+      </div>
+
+      <div class="team__grid" id="team-grid">
+
+        <!-- Chairman — Zhukov Saveliy -->
+        <div class="member-card member-card--chairman reveal">
+          <div class="member-card__img-wrap">
+            <img src="images/chairman.jpg" alt="Жуков Савелий" class="member-card__img" />
+          </div>
+          <div class="member-card__body">
+            <p class="member-card__role">// Team Lead · Председатель ИТС</p>
+            <h3 class="member-card__name">Жуков Савелий</h3>
+            <p class="member-card__bio">
+              Руководитель команды Codion и председатель ИТС КИПФИН. Студент группы 2ИСИП-724.
+              Координирует разработку всех проектов команды, задаёт архитектурные решения
+              и обеспечивает связь между разработкой и учебным заведением.
+              Увлекается системным программированием и DevOps-практиками.
+            </p>
+            <div class="member-card__skills">
+              <span>Python</span><span>JavaScript</span><span>DevOps</span>
+              <span>PostgreSQL</span><span>Docker</span><span>Git</span><span>C# .NET</span><SPan>MS Power
+                BI</SPan><span>HTML/CSS/SCSS/JS</span><SPan>React</SPan>
+            </div>
+            <div class="member-card__socials">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
+              <a href="#" title="VK"><i class="fab fa-vk"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 2: Head Dev -->
+        <div class="member-card reveal">
+          <div class="member-card__img-wrap">
+            <img src="images/head-dev.jpg" alt="Разработчик" class="member-card__img" />
+          </div>
+          <div class="member-card__body">
+            <p class="member-card__role">// Head Developer</p>
+            <h3 class="member-card__name">Имя Фамилия</h3>
+            <p class="member-card__bio">
+              Ведущий разработчик команды. Отвечает за backend-архитектуру
+              и техническую реализацию ключевых модулей. Специалист по базам данных
+              и серверным технологиям. Отредактируйте этот текст.
+            </p>
+            <div class="member-card__skills">
+              <span>Python</span><span>Django</span><span>PostgreSQL</span>
+            </div>
+            <div class="member-card__socials">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="member-card reveal">
+          <div class="member-card__img-wrap">
+            <div
+              style="height:100%;background:linear-gradient(135deg,#0a1020,#0d1830);display:flex;align-items:center;justify-content:center;">
+              <i class="fas fa-user" style="font-size:4rem;color:#1a3050;"></i>
+            </div>
+          </div>
+          <div class="member-card__body">
+            <p class="member-card__role">// Frontend Developer</p>
+            <h3 class="member-card__name">Имя Фамилия</h3>
+            <p class="member-card__bio">
+              Frontend-разработчик команды. Создаёт пользовательские интерфейсы
+              и обеспечивает UX/UI дизайн всех продуктов Codion.
+              Замените это описание реальными данными через insert.py.
+            </p>
+            <div class="member-card__skills">
+              <span>React</span><span>Vue.js</span><span>CSS</span>
+            </div>
+            <div class="member-card__socials">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="member-card reveal">
+          <div class="member-card__img-wrap">
+            <div
+              style="height:100%;background:linear-gradient(135deg,#0a1020,#0d1830);display:flex;align-items:center;justify-content:center;">
+              <i class="fas fa-user" style="font-size:4rem;color:#1a3050;"></i>
+            </div>
+          </div>
+          <div class="member-card__body">
+            <p class="member-card__role">// Mobile Developer</p>
+            <h3 class="member-card__name">Имя Фамилия</h3>
+            <p class="member-card__bio">
+              Разработчик мобильных приложений. Специализируется на кроссплатформенной
+              разработке и интеграции с backend-сервисами команды.
+              Замените это описание реальными данными.
+            </p>
+            <div class="member-card__skills">
+              <span>Flutter</span><span>Dart</span><span>Firebase</span>
+            </div>
+            <div class="member-card__socials">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /#team-grid -->
+    </div>
+  </section>
+
+  <!-- ============================
+     ITS KIPFIN
+============================= -->
+  <section class="section its" id="its">
+    <div class="its__bg"></div>
+    <div class="its__content container">
+      <div class="section__header reveal">
+        <span class="section__tag">// 04 · Сообщество</span>
+        <h2 class="section__title">ИТС КИПФИН</h2>
+      </div>
+
+      <div class="its__inner">
+        <div class="reveal">
+          <img src="images/hero-group.jpg" alt="ИТС КИПФИН" class="its__group-img" />
+        </div>
+
+        <div class="its__text reveal">
+          <div class="its__logo">
+            <img src="images/logo.png" alt="ИТС" onerror="this.style.display='none'" />
+            <div class="its-name">ИТС<br />КИПФИН</div>
+          </div>
+
+          <p>
+            Информационно-техническое сообщество КИПФИНа — это объединение студентов,
+            увлечённых технологиями и разработкой. ИТС — территория идей и технологий,
+            где вместе создаётся цифровое будущее.
+          </p>
+          <p>
+            Все участники команды Codion являются членами ИТС КИПФИН. Мы участвуем
+            в хакатонах, конференциях, мастер-классах и совместных проектах сообщества.
+            Codion — один из флагманских проектов ИТС.
+          </p>
+          <p>
+            ИТС открыто для всех студентов КИПФИНа, кто хочет развиваться в IT,
+            создавать реальные проекты и быть частью профессионального сообщества.
+          </p>
+
+          <div class="its__chairman-badge">
+            <img src="images/chairman.jpg" alt="Жуков Савелий" />
+            <div class="badge-text">
+              <strong>Жуков Савелий</strong>
+              Председатель ИТС КИПФИН · Группа 2ИСИП-724
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+     DYNAMIC BLOCKS (added via insert.py)
+============================= -->
+  <section class="section section--alt" id="news">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">// 05 · Новости &amp; Достижения</span>
+        <h2 class="section__title">Последние обновления</h2>
+        <p class="section__desc">
+          Актуальная информация о проектах команды, достижениях и мероприятиях.
+          Новые записи добавляются через приложение insert.py.
+        </p>
+      </div>
+
+      <!-- DYNAMIC_BLOCKS_START — не удаляйте этот комментарий, insert.py использует его для навигации -->
+      <div class="projects__grid" id="dynamic-blocks">
+
+        <!-- Пример блока новости (добавлен вручную) -->
+        <div class="news-card reveal" data-added="false">
+          <p class="news-card__date">// 2024 · Основание команды</p>
+          <h3 class="news-card__title">Команда Codion основана</h3>
+          <p class="news-card__body">
+            В 2024 году группа студентов КИПФИНа под руководством Жукова Савелия
+            основала команду разработчиков Codion. Первым проектом стал KipCalendar.
+          </p>
+        </div>
+
+        <div class="news-card reveal" data-added="false">
+          <p class="news-card__date">// 2025 · Запуск платформы</p>
+          <h3 class="news-card__title">Старт разработки «Успех Онлайн»</h3>
+          <p class="news-card__body">
+            Команда приступила к разработке образовательной платформы «Успех Онлайн».
+            Добавьте актуальную информацию о ходе разработки через insert.py.
+          </p>
+        </div>
+
+      </div>
+      <!-- DYNAMIC_BLOCKS_END — не удаляйте этот комментарий -->
+
+    </div>
+  </section>
+
+  <!-- ============================
+     FOOTER
+============================= -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="images/logo.png" alt="Codion" onerror="this.style.display='none'" />
+        <span>Codion</span>
+      </div>
+
+      <p class="footer__copy">
+        © 2024–2025 Codion · КИПФИН · Финансовый Университет<br />
+        Команда разработчиков группы 2ИСИП-724
+      </p>
+
+      <div class="footer__links">
+        <a href="#home">Главная</a>
+        <a href="#projects">Проекты</a>
+        <a href="#team">Команда</a>
+        <a href="#its">ИТС</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
