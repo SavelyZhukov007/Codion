@@ -485,18 +485,6 @@
         </div>
       </div>
 
-      
-      <!-- [CODION-BLOCK project "Бла бла" 2026-03-18 11:19] -->
-      <div class="project-card reveal" data-added="true">
-        <div class="project-card__body">
-          <p class="project-card__tag">// веб хрень в разработке</p>
-          <h3 class="project-card__title">Бла бла</h3>
-          <p class="project-card__desc">ывфаыварифывирфывлаолориалоиалфывриафвыа</p>
-          <div class="project-card__tech"><span>d</span><span>f</span><span>g</span><span>e</span><span>g</span><span>d</span><span>g</span><span>ssdf</span><span>sdf</span><span>sfd</span><span>sfd</span><span>sd</span><span>sf</span><span>f</span><span>sfd</span><span>f</span><span>dsfd</span><span>fd</span><span>dfss</span><span>df</span><span>df</span><span>dsff</span><span>ds</span></div>
-          <a href="https://netu.com" class="project-card__link">Подробнее <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-
       <!-- DYNAMIC_BLOCKS_END — не удаляйте этот комментарий -->
 
     </div>
